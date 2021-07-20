@@ -1,14 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import Search from './components/Search';
+import City from './components/City';
 
 export default function App() {
+  const [city, setCity] = useState('Austin');
+
+  const handleCityChange = (newCity) => {
+    setCity(newCity);
+  }
+
   return (
     <SafeAreaView style={styles.container}>
-        <Search />
-        <Text>Hello there. This is Katya....</Text>
-        <Text>Как дела????????</Text>
+        <Search handleChange = {handleCityChange} />
+        <City city = {city} />
+
         <StatusBar style="auto" />
     </SafeAreaView>
   );

@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { Text, TextInput, View, Button, onChangeText } from 'react-native';
 
-const Search = () => {
+const Search = (props) => {
   const [value, onChangeText] = useState('');
-  const [city, setCity] = useState('Austin');
 
   const handlePress = () => {
-    setCity(value)
+    props.handleChange(value);
   }
 
   return (
@@ -17,7 +16,6 @@ const Search = () => {
           style={{ height: 30, width: 200, borderColor: 'gray', borderWidth: 1 }} />
         <Button title = 'Search' onPress={handlePress} />
       </View>
-      <Text>{city}</Text>
     </View>
   )
 }
