@@ -6,9 +6,7 @@ const Search = () => {
   const [city, setCity] = useState('Austin');
 
   const handlePress = () => {
-    console.log('button pressed');
     setCity(value)
-
   }
 
   return (
