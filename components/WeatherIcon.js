@@ -1,6 +1,6 @@
-import ReactAnimatedWeather from 'react-animated-weather';
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
+import ReactAnimatedWeather from 'react-animated-weather';
 
 function WeatherIcon (props) {
 
@@ -39,7 +39,8 @@ function WeatherIcon (props) {
 
 const styles = StyleSheet.create({
   icon: {
-    maxWidth: 100
+    maxWidth: 100,
+    top: 10
   },
 });
 
